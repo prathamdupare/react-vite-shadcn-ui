@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   Sheet,
   SheetTrigger,
@@ -15,7 +14,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Settings } from "lucide-react";
-import { ModeToggle } from "./mode-toggle";
 
 const MainSheet = ({ language, setLanguage }) => {
   const handleChange = (value) => {

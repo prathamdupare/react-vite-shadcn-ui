@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from "react";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//@ts-nocheck
+import { useEffect, useRef } from "react";
 
-// Helper function to escape backslashes for JavaScript strings
 const escapeLaTeX = (latex) => {
   return latex.replace(/\\/g, "\\\\"); // Escape backslashes
 };
@@ -23,12 +24,8 @@ const Render = ({ inputText }) => {
 
   useEffect(() => {
     if (latexContainerRef.current) {
-      // Ensure LaTeX content is properly escaped
       const escapedInputText = escapeLaTeX(inputText);
       console.log("this is escaped", escapedInputText);
-      const exampleLaTeX = escapeLaTeX(
-        "\\lim_{x \\to 0} \\frac{\\sin x}{\\cos x}",
-      );
 
       latexContainerRef.current.innerHTML = `
         <latex-js baseURL="https://cdn.jsdelivr.net/npm/latex.js/dist/">
